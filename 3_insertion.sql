@@ -208,7 +208,7 @@ INSERT INTO Participation (id_projet, id_personne, id_contrat, lieu_affection) V
 (6,17,17,'Nice'),     (1,18,18,'Paris'),    (2,19,19,'Lyon'),     (3,20,20,'Marseille');
 
 -- POSSEDE (20) : un numéro de série (>0) par matériel ; FK vers projet/materiel
-INSERT INTO Possede (id_projet, id_materiel, numero_serie) VALUES
+INSERT INTO Possède (id_projet, id_materiel, numero_serie) VALUES
 (1,'M001',1001),(2,'M002',1002),(3,'M003',1003),(4,'M004',1004),(5,'M005',1005),
 (6,'M006',1006),(1,'M007',1007),(2,'M008',1008),(3,'M009',1009),(4,'M010',1010),
 (5,'M011',1011),(6,'M012',1012),(1,'M013',1013),(2,'M014',1014),(3,'M015',1015),

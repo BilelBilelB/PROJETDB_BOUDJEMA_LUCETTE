@@ -65,7 +65,7 @@ create table Participation (
 );
 create table Possède (
 	id_projet INT, 
-    id_materiel INT,
+    id_materiel VARCHAR(50),
     numero_serie INT,
     FOREIGN KEY(id_projet) REFERENCES projet(id_projet),
     FOREIGN KEY(id_materiel) REFERENCES materiel(id_materiel)

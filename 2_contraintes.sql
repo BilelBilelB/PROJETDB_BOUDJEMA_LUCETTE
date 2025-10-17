@@ -15,13 +15,13 @@ ALTER TABLE projet
 ALTER TABLE personne
   ADD CONSTRAINT ck_personne_tel           CHECK (
     telephone_personne IS NOT NULL
-    AND LENGTH = 10
+    AND CHAR_LENGTH(telephone_personne) = 10
   ),
   ADD CONSTRAINT ck_personne_email         CHECK (
     email_personne IS NOT NULL AND email_personne LIKE '%_@_%._%'
   ),
   ADD CONSTRAINT ck_personne_cp_len        CHECK (
-    code_postal_personne IS NULL OR LENGTH(code_postal_personne) BETWEEN 4 AND 10
+    code_postal_personne IS NULL OR CHAR_LENGTH(code_postal_personne) BETWEEN 4 AND 10
   );
 
 
@@ -70,7 +70,7 @@ ALTER TABLE Participation
 
 
 
-ALTER TABLE Possede
+ALTER TABLE Possède
   ADD CONSTRAINT ck_possede_num_serie_pos  CHECK (numero_serie > 0);
 
 
